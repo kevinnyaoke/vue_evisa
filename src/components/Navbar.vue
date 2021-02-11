@@ -58,6 +58,7 @@ export default {
         services {
           id
           link
+          slug
         }
       }
       `

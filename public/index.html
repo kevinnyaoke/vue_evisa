@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>evisa.go.ke | Republic of Kenya Electronic Visa System</title>
+  <meta name="Title" content="evisa.go.ke | Republic of Kenya Electronic Visa System">
+  <meta name="Description"
+    content="Apply for a Single entry visa, Transit visa or Courtesy visa to Kenya and pay securely using your VISA card or Mastercard.">
+  <meta name="Keywords"
+    content="evisa, visa, safari, Kenya, travel, east, Africa, tanzania, uganda, rwanda, , burundi, congo">
+  <meta name="robots" content="INDEX, FOLLOW">
+  <meta name="country" content="Kenya">
+  <meta name="Language" content="en">
+  <meta name="google-site-verification" content="huz25l_R6TYviEYZywns4a0TkVbvEzla_dXKsH5a5KQ" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/assets-evisa/img/logos/favicon.ico">
+  
+ 
+</head>
+
+<body>
+  <div id="app"></div>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> -->
+
+  <script>
+    (function (document) {
+      'use strict';
+
+      var TableFilter = (function (myArray) {
+        var search_input;
+
+        function _onInputSearch(e) {
+          search_input = e.target;
+          var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+          myArray.forEach.call(tables, function (table) {
+            myArray.forEach.call(table.tBodies, function (tbody) {
+              myArray.forEach.call(tbody.rows, function (row) {
+                var text_content = row.textContent.toLowerCase();
+                var search_val = search_input.value.toLowerCase();
+                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+              });
+            });
+          });
+        }
+
+        return {
+          init: function () {
+            var inputs = document.getElementsByClassName('search-input');
+            myArray.forEach.call(inputs, function (input) {
+              input.oninput = _onInputSearch;
+            });
+          }
+        };
+      })(Array.prototype);
+
+      document.addEventListener('readystatechange', function () {
+        if (document.readyState === 'complete') {
+          TableFilter.init();
+        }
+      });
+
+    })(document);
+  </script>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+  
+</body>
+
 </html>

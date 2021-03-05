@@ -12,7 +12,7 @@
                     <span class="sm:block">Services</span>
                 </h1>
 
-                <p class="font-normal mt-4 text-3xl leading-6 text-gray-900">{{ service.link }}</p>
+                <p class="font-normal mt-4 text-3xl leading-6 text-gray-900">{{ visaService.link}}</p>
             </div>
 
         </div>
@@ -33,6 +33,7 @@
                                 <div class="flex-1">
 
                                     <Sidenav></Sidenav>
+                                    
 
                                 </div>
                             </div>
@@ -43,12 +44,151 @@
 
                         <div class="w-auto col-span-3 sm:col-span-2 prose prose-indigo prose-lg">
                             <h1 class="text-2xl sm:text-xl tracking-tight font-extrabold lg:text-4xl">
-                                <span class="sm:block">{{ service.link }}</span>
+                                <span class="sm:block">{{ visaService.link }}</span>
                             </h1>
 
                             <p class="mt-8 text-gray-500 leading-8 text-2xl">
-                                {{ service.content }}
+                                {{ visaService.content }}
+                                
                             </p>
+                            
+                            
+                            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                                    Basic Requirements
+                                </h2>
+
+
+                                <ol class="mt-8 text-xl text-gray-500 leading-8">
+                                    <li>Valid travel document not less than six months.</li>
+
+                                    <li>Must be a holder of a service, official and diplomatic passport.</li>
+
+                                    <li>Must hold an official letter from the country of origin/ organization/ foreign
+                                        affairs.</li>
+
+                                    <li>Spouses and children accompanying Diplomatic, Service or Official passport
+                                        holders on duty, but traveling on
+                                        ordinary passports do not qualify for courtesy visa whether on transit, business
+                                        or holiday.</li>
+
+                                    <li>A round trip ticket or a boarding pass for passengers on transit.</li>
+
+                                    <li>In cases of applicants who fall under category 3 of the Visa regime /
+                                        Regulations, the Kenyan visa regulations must
+                                        apply whether on transit or official business.</li>
+                                </ol>
+                                
+                                 <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                                    {{ visaService.common.Validity.title }}
+                                </h2>
+
+
+                                <p class="mt-8 text-xl text-gray-500 leading-8">{{ visaService.common.Validity.body }} </p>
+                                
+                                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                                    Fees
+                                </h2>
+
+                                <div class="border border-gray-200 rounded-lg shadow-sm divide-y divide-gray-200">
+                                    <div class="p-6">
+                                        <p class="mt-8 text-gray-500">{{ visaService.common.Fees.body }}</p>
+                                        <p class="mt-8">
+                                            <span class="text-4xl font-extrabold text-gray-900">$ {{ visaService.common.Fees.amount }}</span>
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+
+                                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                                    Attachments
+                                </h2>
+
+                                <p class="mt-8 text-xl text-gray-500 leading-8">{{ visaService.common.Fees.body }}</p>
+                                
+                                
+                                 <h3>
+                                    For Business Visits
+                                </h3>
+
+                                <ol class="mt-8 text-xl text-gray-500 leading-8">
+                                    <li>Invitation Letters from company / Invitation letter for business visits</li>
+                                    <li>Copies of registration of the company</li>
+                                    <li>Return air ticket</li>
+                                </ol>
+
+
+                                <h3>
+                                    For Family visits
+                                </h3>
+
+                                <ol class="mt-8 text-xl text-gray-500 leading-8">
+                                    <li>Invitation Letters from family.</li>
+                                    <li>Identity card / Passport / Alien card / Entry permit of the host.</li>
+                                    <li>Return air ticket</li>
+                                </ol>
+
+                                <h3>
+                                    For Tourists
+                                </h3>
+
+                                <ol class="mt-8 text-xl text-gray-500 leading-8">
+                                    <li>Travel itinerary (Details about places to visit if going as a tourist).</li>
+                                    <li>Hotel bookings.</li>
+                                    <li>Return air ticket</li>
+                                </ol>
+
+                                <h3>
+                                    Identity Documents
+                                </h3>
+
+                                <ol class="mt-8 text-xl text-gray-500 leading-8">
+                                    <li>Clear Passport biodata page.</li>
+                                    <li>A clear photograph.</li>
+                                </ol>
+                                
+                                 <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                                    Photo requirements
+                                </h2>
+
+
+                                <ol class="mt-8 text-xl text-gray-500 leading-8">
+
+                                    <li>DO NOT take a photograph of or scan the photo in your passport.</li>
+
+                                    <li>Must be taken within the past 6 months, showing your current appearance.</li>
+
+                                    <li>Must be in color.</li>
+
+                                    <li>Must show your full face, front view with a plain white or off-white background.
+                                    </li>
+
+                                    <li>Must show a full face, front view with a plain white or off-white background.
+                                    </li>
+
+                                    <li>Must be taken in normal street attire. Uniforms should NOT BE worn in
+                                        photographs except religious attire that is
+                                        worn daily.</li>
+
+                                    <li>Do not wear a hat or headgear that obscures the hair or hairline.</li>
+
+                                    <li>If you normally wear prescription glasses, a hearing device, wig, or similar
+                                        articles, they should be worn for your
+                                        picture.</li>
+
+                                    <li>Dark glasses or nonprescription glasses with tinted lenses are not acceptable
+                                        unless you need them for medical
+                                        reasons. A medical certificate may be required.</li>
+
+
+                                </ol>
+
+
+                                <a href=""> Photo Guidelines </a>
+
+                            
+                            
                         </div>
 
                     </div>
@@ -91,21 +231,33 @@ export default {
     },
     data() {
         return {
-            service: [],
+            visaService: [],
             api_url: process.env.VUE_APP_STRAPI_API_URL,
             routeParam: this.$route.params.id,
-
         };
     },
     apollo: {
-        service: {
+        visaService: {
             query: gql `
-        query Services($id: ID!) {
-          service(id: $id) {
+        query visaServices($id: ID!) {
+          visaService(id: $id) {
             id
             link
             content
             slug
+            common{
+               Fees{
+                 body
+                 amount
+            }
+              Attachment{
+                  body
+             }
+             Validity{
+              title
+              body
+             }
+            }
           }
         }
       `,

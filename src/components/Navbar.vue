@@ -16,7 +16,7 @@
         <div class="dropdown-content">
 
             <ul>
-                <li v-for="service in services" v-bind:key="service.id">
+                <li v-for="service in visaServices" v-bind:key="service.id">
 
                     <router-link class="text-sm uppercase font-medium text-gray-500 rounded-lg hover:text-gray-900" :to="{ path: '/pages/' + service.id }" :key="service.id">
 
@@ -46,16 +46,16 @@ export default {
     name: 'Nav',
     data() {
         return {
-            services: [],
+            visaServices: [],
             api_url: process.env.VUE_APP_STRAPI_API_URL,
             routeParam: this.$route.params.id,
 
         };
     },
     apollo: {
-        services: gql `
-       query Services {
-        services {
+        visaServices: gql `
+       query visaServices {
+        visaServices {
           id
           link
           slug

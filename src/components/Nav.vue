@@ -34,7 +34,6 @@
                             <div id="myDropdown" class="dropdown-content shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                                 <div class="relative grid bg-white gap-6 p-8">
                                     <ul>
-                                        <li v-for="service in services" v-bind:key="service.id">
                                             <router-link class="text-sm uppercase font-medium text-gray-500 rounded-lg hover:text-gray-900" :to="{ path: '/pages/' + service.id }" :key="service.id">
 
                                                 {{ service.link }} <br><br>
@@ -100,7 +99,7 @@
 
                                     <a href="courtesy-visa.html" class="text-sm uppercase font-medium text-gray-500 rounded-lg hover:text-gray-900">Courtesy Visa</a>
                                     <a href="east-african-tourist-visa.html" class="text-sm uppercase font-medium text-gray-500 rounded-lg hover:text-gray-900">East African Tourist Visa</a>
-                                    <a href="multiple-entry-visa.html" class="text-sm uppercase font-medium text-gray-500 rounded-lg hover:text-gray-900">Multiple Entry Visa</a>
+                                     <a href="multiple-entry-visa.html" class="text-sm uppercase font-medium text-gray-500 rounded-lg hover:text-gray-900">Multiple Entry Visa</a>
 
                                     <a href="5yr-multiple-entry-visa.html" class="text-sm uppercase font-medium text-gray-500 rounded-lg hover:text-gray-900">5yr Multiple Entry Visa</a>
                                 </div>
@@ -130,16 +129,16 @@ export default {
     name: 'Nav',
     data() {
         return {
-            services: [],
+            visaServices: [],
             api_url: process.env.VUE_APP_STRAPI_API_URL,
             routeParam: this.$route.params.id,
 
         };
     },
     apollo: {
-        services: gql `
-       query Services {
-        services {
+        visaServices: gql `
+       query visaServices {
+        visaServices {
           id
           link
         }

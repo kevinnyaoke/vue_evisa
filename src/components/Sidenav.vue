@@ -1,6 +1,6 @@
 <template>
 <ul class="space-y-4">
-    <li class="text-base truncate border-b pb-3" v-for="service in services" v-bind:key="service.id">
+    <li class="text-base truncate border-b pb-3" v-for="service in visaServices" v-bind:key="service.id">
         <router-link :to="{ path: '/pages/' + service.id }" :key="service.id">
 
             {{ service.link }}
@@ -17,16 +17,16 @@ export default {
     name: "",
     data() {
         return {
-            services: [],
+            visaServices: [],
             api_url: process.env.VUE_APP_STRAPI_API_URL,
             routeParam: this.$route.params.id,
            
         };
     },
     apollo: {
-        services: gql `
-       query Services {
-        services {
+        visaServices: gql `
+       query visaServices {
+        visaServices {
           id
           link
           content

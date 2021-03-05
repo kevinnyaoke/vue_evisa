@@ -19,6 +19,7 @@
     </section>
 
     <div class="bg-white">
+    
         <div class="pb-16 sm:pb-20">
             <div class="max-w-7xl mx-auto p-8 lg:p-20 bg-white border-t-8 border-green-500 relative">
 
@@ -32,19 +33,6 @@
 
                     </p>
 
-                    <ul class="space-y-4">
-                        <li class="text-base truncate border-b pb-3" v-for="service in titles" v-bind:key="service.id">
-                            <!-- <a href="single-entry-visa.html" class="text-sm uppercase font-medium text-gray-900 hover:text-gray-700">
-                                                Single Entry Visa
-                                            </a> -->
-
-                            <router-link :to="{ path: '/pages/' + service.id }" :key="service.id">
-
-                                {{ service.link }}
-
-                            </router-link>
-                        </li>
-                    </ul>
 
                     <ol>
                         <li v-for="category in categories" v-bind:key="category.id">
@@ -63,14 +51,14 @@
 
                 </div>
 
-                <input type="search" placeholder="Search a country..." class="search-input border-gray-300 rounded-md text-2xl px-7 py-4 mb-5 w-full shadow-sm bg-gray-50 focus:bg-white" data-table="eligibility" />
+                <input id="myInput" type="search" placeholder="Search a country..." class="search-input border-gray-300 rounded-md text-2xl px-7 py-4 mb-5 w-full shadow-sm bg-gray-50 focus:bg-white" data-table="eligibility" />
 
                 <!-- This example requires Tailwind CSS v2.0+ -->
                 <div class="flex flex-col">
                     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                             <div class="overflow-hidden border border-gray-300 sm:rounded-lg">
-                                <table class="min-w-full divide-y divide-gray-200 eligibility">
+                                <table id="myTable" class="min-w-full divide-y divide-gray-200 eligibility">
                                     <thead class="bg-gray-50">
                                         <tr>
                                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">

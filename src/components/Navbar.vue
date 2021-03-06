@@ -2,10 +2,10 @@
 <div class="topnav flex justify-between items-center py-6 md:justify-start md:space-x-10" id="myTopnav">
     <!-- <a href="#home" class="">Logo</a> -->
 
-    <a href="evisa.html">
+    <router-link :to="{path:'/'}">
         <span class="sr-only">eVisa Kenya</span>
         <img class="h-8 w-auto sm:h-10" src="../assets/assets-evisa/img/logos/jpg/evisa-logo.jpg" alt="eVisa Kenya" />
-    </a>
+    </router-link>
 
     <router-link class="text-sm uppercase font-medium text-gray-900 hover:text-gray-900" :to="{path:'/'}">Home</router-link>
 

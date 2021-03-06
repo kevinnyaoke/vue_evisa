@@ -14,7 +14,7 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+
 import Navbar from './components/Navbar'
 import Footer from './components/Footer';
 

@@ -6,7 +6,7 @@
                 <div class="pt-10 pb-12 px-6 sm:pt-16 sm:px-16 lg:py-16 lg:pr-0 xl:py-20 xl:px-20">
                     <div class="lg:self-center">
                         <h2 class="text-3xl font-extrabold text-white sm:text-4xl top-red-line mt-8">
-                            <span class="block">{{ home.heading }}</span>
+                            <span class="block">Evisa {{ home.heading }}</span>
                         </h2>
                         <p class="font-normal mt-4 text-lg leading-6 text-gray-100">
                             {{ home.intro}}

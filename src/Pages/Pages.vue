@@ -9,7 +9,7 @@
             <div class="relative py-12 px-4 md:px-20 pt-24 md:w-3/5">
 
                 <h1 class="text-2xl sm:text-xl tracking-tight font-extrabold  sm:mt-5 lg:mt-6 lg:text-4xl">
-                    <span class="sm:block">Services</span>
+                    <span class="sm:block">Service</span>
                 </h1>
 
                 <p class="font-normal mt-4 text-3xl leading-6 text-gray-900">{{ visaService.link}}</p>
@@ -40,7 +40,9 @@
                         </div>
 
                     </div>
-                    <div class="w-auto col-span-3 md:col-span-2">
+
+                            
+                                                <div class="w-auto col-span-3 md:col-span-2">
 
                         <div class="w-auto col-span-3 sm:col-span-2 prose prose-indigo prose-lg">
                             <h1 class="text-2xl sm:text-xl tracking-tight font-extrabold lg:text-4xl">
@@ -52,7 +54,7 @@
                                 
                             </p>
                             
-                            
+                                                        
                             <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
                                     Basic Requirements
                                 </h2>
@@ -186,8 +188,10 @@
 
 
                                 <a href=""> Photo Guidelines </a>
-
                             
+                            
+                            
+                                                        
                             
                         </div>
 
@@ -203,7 +207,7 @@
                 <div class="flex flex-col overflow-hidden bg-white border p-7">
                     <div>
                         <h2 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-2xl max-w-sm">
-                            Get your account today
+                            Get your account today/evisa
                         </h2>
                         <p class="md:w-4/6 mt-4 font-normal text-lg leading-6 text-gray-900">
                             One account is all you need to access all Government Services

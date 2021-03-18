@@ -18,7 +18,7 @@
             <ul>
                 <li v-for="service in visaServices" v-bind:key="service.id">
 
-                    <router-link class="text-sm uppercase font-medium text-gray-500 rounded-lg hover:text-gray-900" :to="{ path: '/pages/' + service.id }" :key="service.id">
+                    <router-link class="text-sm uppercase font-medium text-gray-500 rounded-lg hover:text-gray-900" :to="{ path: '/pages/' + service.id + service.slug}" :key="service.id">
 
                         {{ service.link }} <br>
 

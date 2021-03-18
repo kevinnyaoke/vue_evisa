@@ -1,7 +1,7 @@
 <template>
 <ul class="space-y-4">
     <li class="text-base truncate border-b pb-3" v-for="service in visaServices" v-bind:key="service.id">
-        <router-link :to="{ path: '/pages/' + service.id }" :key="service.id">
+        <router-link :to="{ path: '/pages/' + service.id + service.slug }" :key="service.id">
 
             {{ service.link }}
 
